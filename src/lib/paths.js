@@ -22,11 +22,11 @@ if (process.platform === 'win32') {
   try { require('child_process').execFile('attrib', ['+h', chromium], { windowsHide: true }, () => {}) } catch {}
 }
 
-// Bring data over from older locations the first time (AppData copy, or the old "Amethyst" name).
+// Bring data over from an older AppData copy the first time.
 function migrate () {
   if (fs.existsSync(path.join(base, 'launcher.json'))) return null
   const appData = app.getPath('appData')
-  const candidates = ['plunder', 'Plunder', 'amethyst-launcher', 'Amethyst Launcher'].map(n => path.join(appData, n)).filter(d => path.resolve(d) !== path.resolve(base))
+  const candidates = ['plunder', 'Plunder'].map(n => path.join(appData, n)).filter(d => path.resolve(d) !== path.resolve(base))
   const old = candidates.find(d => fs.existsSync(path.join(d, 'launcher.json')))
   if (!old) return null
   for (const name of ['launcher.json', 'instances', 'shared', 'runtimes', 'backups', 'auth', 'cache']) {
