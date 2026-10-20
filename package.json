@@ -1,6 +1,6 @@
 {
   "name": "plunder",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Plunder \u2014 all-in-one Minecraft launcher for Java and Bedrock",
   "main": "src/main.js",
   "scripts": {

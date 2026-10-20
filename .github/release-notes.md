@@ -1,4 +1,4 @@
-First public release of Plunder.
+Plunder 1.7.1 — same features as 1.7.0, tidied up under the Plunder name.
 
 **Download `Plunder.exe` below**, put it in its own folder (for example `Documents\Plunder`) and run it. Everything Plunder saves goes into a `Plunder Data` folder next to it. If Windows shows "Windows protected your PC", click **More info → Run anyway**.
 
