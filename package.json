@@ -1,0 +1,78 @@
+{
+  "name": "plunder",
+  "version": "1.7.0",
+  "description": "Plunder \u2014 all-in-one Minecraft launcher for Java and Bedrock",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "author": "You",
+  "license": "MIT",
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.15",
+    "adm-zip": "^0.6.1",
+    "archiver": "^7.0.1",
+    "extract-zip": "^2.0.1",
+    "minecraft-launcher-core": "^3.18.2",
+    "prismarine-auth": "^3.1.1",
+    "sql.js": "^1.14.2"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^26.15.3",
+    "resedit": "^2.0.3"
+  },
+  "productName": "Plunder",
+  "build": {
+    "appId": "com.plunder.launcher",
+    "productName": "Plunder",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "build/icon.png",
+      "package.json",
+      "!node_modules/sql.js/dist/!(sql-wasm.js|sql-wasm.wasm)",
+      "!node_modules/sql.js/{documentation,examples,src,test}/**",
+      "!**/*.{md,markdown,ts,map}",
+      "!**/{test,tests,__tests__,example,examples,docs}/**"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "portable"
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Plunder",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    },
+    "portable": {
+      "artifactName": "Plunder.exe",
+      "unpackDirName": "plunder-app"
+    },
+    "electronLanguages": [
+      "en-US"
+    ],
+    "afterPack": "build/afterPack.js",
+    "compression": "maximum",
+    "extraResources": [
+      {
+        "from": "build/bedrock-tools",
+        "to": "bedrock-tools"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thepixlpirate/plunder.git"
+  },
+  "homepage": "https://github.com/thepixlpirate/plunder"
+}

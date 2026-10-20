@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>Add-on browser</title>
+<link rel="stylesheet" href="pmc-bar.css">
+</head><body>
+<div class="bar">
+  <button id="back" title="Back"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button id="forward" title="Forward"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+  <button id="reload" title="Reload"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg></button>
+  <div class="cats" id="sites"></div>
+  <div class="cats" id="cats"></div>
+  <div class="url"><span id="spin" class="spin"></span><span id="title">Loading…</span></div>
+  <div class="dl" id="dl"></div>
+  <div class="target" title="Downloads are saved into this Bedrock profile and imported into Minecraft"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg><span id="target">Bedrock</span></div>
+  <button id="folder" title="Open profile folder"><svg viewBox="0 0 24 24"><path d="M3.5 6.5A1.5 1.5 0 0 1 5 5h4l2 2.5h8a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/></svg></button>
+  <button id="external" title="Open in your normal browser"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></button>
+</div>
+<script src="pmc-bar.js"></script>
+</body></html>

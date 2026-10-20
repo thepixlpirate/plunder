@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'">
+  <title>Plunder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="titlebar">
+      <div class="brand"><span class="logo" id="logo"></span><span class="wordmark">Plunder</span><button class="tb-btn" id="toggle-left" data-act="toggle-left" title="Collapse sidebar"></button></div>
+      <div class="tb-right"><button class="tb-btn on" id="toggle-right" data-act="toggle-right" title="Hide right panel"></button>
+      <div class="win-ctrls">
+        <button data-act="win:min" title="Minimize"><svg viewBox="0 0 12 12"><path d="M2 6h8"/></svg></button>
+        <button data-act="win:max" title="Maximize"><svg viewBox="0 0 12 12"><rect x="2.5" y="2.5" width="7" height="7" rx=".5"/></svg></button>
+        <button data-act="win:close" class="close" title="Close"><svg viewBox="0 0 12 12"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7"/></svg></button>
+      </div></div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main" id="main"></main>
+      <aside class="rightbar" id="rightbar"></aside>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toasts"></div>
+  <div id="drop-overlay"><div><span id="drop-icon"></span><b>Drop to add</b><small>Mods (.jar), packs (.zip) or Bedrock add-ons (.mcpack, .mcaddon)</small></div></div>
+  <script src="icons.js"></script>
+  <script src="art.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

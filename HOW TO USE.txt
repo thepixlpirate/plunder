@@ -1,0 +1,134 @@
+PLUNDER — QUICK START
+=====================
+
+1) INSTALL (it's portable — just one file)
+   - Put all 3 download parts (Plunder-1.3.7z.001, .002, .003) in one folder.
+   - Right-click Plunder-1.3.7z.001 > 7-Zip > "Extract Here" (free from 7-zip.org).
+     You get ONE file: Plunder.exe.
+   - Make a folder for it, e.g. Documents\Plunder, and put Plunder.exe there.
+     Plunder keeps everything it saves in a single "Plunder Data" folder right
+     next to Plunder.exe. Move both together to take it anywhere (even a USB stick).
+   - Double-click Plunder.exe. If Windows says "Windows protected your PC":
+     click "More info" > "Run anyway".
+   - Startup takes a few seconds because the single file unpacks itself first.
+   - Coming from an older version? Your instances, worlds and sign-ins move
+     into "Plunder Data" automatically the first time.
+   - You can delete the old Plunder folder (the one with lots of files).
+
+2) SIGN IN (needed for Java Edition)
+   - Click "Sign in" (top right). Click "Copy code & open Microsoft",
+     paste the code, sign in. The window closes by itself.
+
+3) PLAY JAVA
+   - Java > Installations > "New instance". Vanilla = normal game.
+     Fabric or Quilt = needed for mods. Press PLAY.
+
+4) MEMORY (RAM)
+   - Settings > Java Edition (default), or an instance's Settings tab.
+   - The slider goes up to all the memory your PC has. You can also type an
+     exact number of GB. A warning shows if you pick more than 3/4 of it.
+
+5) MODS & MODPACKS (Java)
+   - Java > Mods: pick the instance, search, Install. Or drag .jar files in.
+   - Java > Modpacks: Install creates a new instance (Fabric/Quilt packs).
+
+6) BEDROCK ADD-ONS
+   - Bedrock > Add-ons. Pick a source at the top right:
+     ModBay: click "Get" — it downloads and Minecraft imports it.
+     Planet Minecraft: click "Open & download", then the download button on
+     the page. Plunder saves the file to your profile and Minecraft imports it.
+   - CurseForge also works once you add a key (step 8).
+
+7) SERVERS (Java and Bedrock)
+   - Java > Servers or Bedrock > Servers. Add a server (address:port works).
+   - Each card shows online/offline, ping, players online / max, the message
+     of the day and version. It refreshes every 30 seconds.
+   - Join: Java launches an instance straight into the server.
+     Bedrock opens Minecraft and connects.
+
+8) CURSEFORGE KEY (optional)
+   - Settings > CurseForge > open the console link > API keys.
+   - Use the COPY ICON next to the key, paste it in, click "Save & test".
+     It tells you right away if the key works.
+
+9) LAYOUT
+   - The two small buttons at the top of the window collapse the left sidebar
+     and hide the right panel. Same switches are in Settings > Layout.
+
+10) WORLD BACKUPS
+   - Worlds > "Back up". "Backups" > "Restore as copy" never overwrites.
+
+11) IMPORT FROM OTHER LAUNCHERS (Modrinth App, AstralRinth, Prism,
+    CurseForge, GDLauncher, the official launcher)
+   - Java > Installations > "Import from another launcher".
+   - Plunder finds your other launchers' instances. Click "Import…",
+     choose a new or existing instance, and tick what to bring over:
+     worlds, mods, resource packs, shaders, settings, server list.
+   - Not listed? Click "Pick a folder…" and choose the instance folder
+     (the one with "saves" or "mods" inside).
+   - Single worlds: an instance's Worlds tab > "Import world folder" or
+     "Import world .zip". Bedrock > Worlds > "Import world" (.mcworld).
+   - Everything is copied — your other launcher keeps its files.
+
+12) OPEN .MCADDON FILES WITH PLUNDER
+   - Settings > Add-on files > "Open add-on files with Plunder".
+   - A Windows box pops up: pick Plunder and click "Always".
+   - From then on, double-clicking a .mcaddon, .mcpack or .mcworld (or
+     opening one from your browser's downloads) installs it into Minecraft
+     through Plunder and keeps a copy in your Bedrock profile.
+   - If you move Plunder.exe somewhere else, just open it once from the new
+     spot and it updates itself.
+
+13) BEDROCK INSTALLATIONS (like Java)
+   - Bedrock > Installations > "New installation". Pick a name and a version.
+     Versions not on your PC yet download automatically from Microsoft
+     (1-2 GB); Windows asks "allow changes?" once - click Yes.
+   - Tick "Own worlds, add-ons & settings" to keep that installation's stuff
+     separate. Untick it to share your normal Minecraft worlds.
+   - One-time setup for versions other than the Store one: turn on Developer
+     Mode (Windows Settings > System > For developers). The Installations page
+     shows a checklist if anything is missing.
+   - Only one Minecraft runs at a time; close it before switching.
+   - While Plunder's versions are in use the Store copy is set aside (worlds
+     stay). "Restore Store version" brings it back.
+
+14) MOD UPDATES (Java)
+   - On an instance's Content tab, click the round arrow button next to
+     "Browse content" to check for updates.
+   - Click "Update" on a mod, or "Update all".
+   - Click "Modrinth" or "CurseForge" on a mod to open its page.
+
+15) FORGE & NEOFORGE
+   - New instance > pick Forge or NeoForge as the mod loader. Forge and
+     NeoForge modpacks (from Modrinth or CurseForge) now install too.
+
+16) AUTOMATIC BACKUPS
+   - Settings > Automatic world backups. By default Plunder backs up worlds
+     that changed, once a day before you play, and keeps the newest 5.
+
+17) SHARE MODPACKS
+   - Instance "..." menu > Export as modpack. Send the .mrpack to friends.
+   - Import one: Installations > Import modpack file, drag a .mrpack onto
+     Plunder, or double-click it (after Settings > Add-on files setup).
+
+18) CRASHES & MISSING MODS
+   - If the game crashes, Plunder explains why in plain words and offers to
+     turn off the mod that probably caused it. Log tab > "Explain last crash".
+   - The Content tab warns about missing required mods (with Install
+     buttons) and mods that don't work together. Plunder also warns before
+     you press Play.
+
+19) SKINS & CAPES
+   - Sidebar > Skins & capes. Add skin PNGs (or drag them in), pick wide or
+     slim arms, click Wear. Choose or hide your cape.
+
+20) STATS & QUICK SETTINGS
+   - Home shows your play time, this week, and most-played instances.
+   - Instance page > sliders button: fullscreen, window size, auto-join a
+     server, memory.
+
+21) UPDATES
+   - Settings > Updates: enter the GitHub repository Plunder's releases are
+     published to. Plunder then checks on start and can update itself.
+
+WHERE THINGS ARE SAVED:  the "Plunder Data" folder next to Plunder.exe
