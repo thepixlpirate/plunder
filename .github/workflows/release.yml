@@ -1,9 +1,11 @@
-# Builds Plunder.exe on Windows and publishes it as a GitHub release whenever a tag like v1.7.0 is pushed.
+# Builds Plunder.exe on Windows and publishes it as a GitHub release.
+# Runs whenever the version in package.json changes on main (or by hand from the Actions tab).
 name: Release
 
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths: ['package.json']
   workflow_dispatch:
 
 permissions:
@@ -14,16 +16,35 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Read version
+        id: v
+        shell: bash
+        run: |
+          echo "tag=v$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+      - name: Skip if this version is already released
+        id: check
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${{ steps.v.outputs.tag }}" --repo "${{ github.repository }}" >/dev/null 2>&1; then echo "exists=true" >> "$GITHUB_OUTPUT"; else echo "exists=false" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
+        if: steps.check.outputs.exists == 'false'
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+        if: steps.check.outputs.exists == 'false'
       - name: Build Plunder.exe
+        if: steps.check.outputs.exists == 'false'
         run: npx electron-builder --win portable --x64 --publish never
       - name: Publish release
+        if: steps.check.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
-          name: Plunder ${{ github.ref_name }}
+          tag_name: ${{ steps.v.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          name: Plunder ${{ steps.v.outputs.tag }}
           body_path: .github/release-notes.md
           files: dist/Plunder.exe
+          make_latest: true
